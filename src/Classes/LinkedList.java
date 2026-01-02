@@ -46,11 +46,11 @@ class Node {
         System.out.println("Length:"+ length);
     }
 
-    public void makeEmpty() {
-        head = null;
-        tail = null;
-        length = 0;
-    }
+//    public void makeEmpty() {
+//        head = null;
+//        tail = null;
+//        length = 0;
+//    }
 
     public void append(int value) {
         Node newNode = new Node(value);
@@ -64,23 +64,36 @@ class Node {
         length++;
     }
 
-    public Node removeLast() {
-        if (length == 0) return null;
-        Node temp = head;
-        Node pre = head;
-        while(temp.next != null) {
-            pre = temp;
-            temp = temp.next;
-        }
-        tail = pre;
-        tail.next = null;
-        length--;
+//    public Node removeLast() {
+//        if (length == 0) return null;
+//        Node temp = head;
+//        Node pre = head;
+//        while(temp.next != null) {
+//            pre = temp;
+//            temp = temp.next;
+//        }
+//        tail = pre;
+//        tail.next = null;
+//        length--;
+//        if (length == 0) {
+//            head = null;
+//            tail = null;
+//        }
+//        return temp;
+//    }
+
+    public void prepend(int value) {
+        Node newNode = new Node(value);
         if (length == 0) {
-            head = null;
-            tail = null;
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
         }
-        return temp;
+        length++;
     }
+
 
 
 }
