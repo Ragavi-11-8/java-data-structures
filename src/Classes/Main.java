@@ -14,7 +14,7 @@ public class Main{
         // (0) Items - Returns null
         System.out.println(linkedlist.removeLast());
 
-        System.out.println("test");
+    
 
 //        linkedlist.getHead();
 //        linkedlist.getTail();
