@@ -13,8 +13,7 @@ public class Main{
         System.out.println(linkedlist.removeLast().value);
         // (0) Items - Returns null
         System.out.println(linkedlist.removeLast());
-
-    
+        System.out.println("Nagu commit");
 
 //        linkedlist.getHead();
 //        linkedlist.getTail();
